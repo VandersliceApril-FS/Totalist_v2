@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ePortfolios/wdd-2202-VandersliceApril-FS.git"
+    "url": "git+https://github.com/aprilvanderslice/Totalist_v2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ePortfolios/wdd-2202-VandersliceApril-FS/issues"
+    "url": "https://github.com/aprilvanderslice/Totalist_v2/issues"
   },
-  "homepage": "https://github.com/ePortfolios/wdd-2202-VandersliceApril-FS#readme",
+  "homepage": "https://github.com/aprilvanderslice/Totalist_v2#readme",
   "dependencies": {
     "axios": "^0.26.0",
     "bcrypt": "^5.0.1",
