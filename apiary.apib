@@ -1,0 +1,144 @@
+FORMAT: 1A
+
+# totalist
+
+totalist is an api for managing users shopping lists
+
+## Data Structures
+### List (Base Model)
++ Include Id
++ title: Groceries (string, required)
++ total: 84.34 (number)
++ users_id: `b00983cd-ecdb-4675-a4f8-6b3c6a192f86` (string)
+
+### List Item (Base Model)
++ Include Id
++ name: Bananas (string, required)
++ cost: 0.44 (number)
++ quantity: 2 (number)
++ item_total: 0.88 (number) 
++ isCompleted: false (boolean)
++ lists_id: `b00983cd-ecdb-4675-a4f8-6b3c6a192f86` (string, required)
+
+### User (Base Model)
++ Include Id
++ firstname: April (string, required)
++ lastname: Van (string, required)
++ password: pass2345 (string, required)
+
+### Base Model (object)
++ createdAt: `2022-02-14T14:30:44.620Z` (string, required) = Date resource was created
++ updatedAt: `2022-02-14T14:30:44.620Z` (string, required) = Date resource was last updated
+
+### Id
++ id: `b00983cd-ecdb-4675-a4f8-6b3c6a192f86` (string, required) - Unique Identifier (uuid)
+
+## /lists
+
+### GET
+Get all lists
+ + Response 200 (application/json)
+    + Attributes (array[List])
+ 
+
+### POST
+Create a new list
++ Request (application/json)
+    + Attributes (object)
+        + title: Groceries New (string, required)
++ Response 201 (application/json)
+    + Attributes (List)
+
+## /lists/{id}
+
++ Parameters
+    + id: `b00983cd-ecdb-4675-a4f8-6b3c6a192f86` (string) - List id
+
+### GET
+Get one list by id
+
++ Response 200
+    + Attributes (List)
+
+### PUT
+Update a list name by id
++ Response 202
+    + Attributes (List)
+
+### DELETE
+Delete an entire list
++ Response 202
+
+# Group List Item Collection
+
+## /listItems
+### GET
+Get all list items
+
++ Response 200 (application/json)
+    + Attributes (array[List Item])
+
+### POST
+Create a new list item
++ Request (application/json)
+    + Attributes (object)
+        + title: Bananas (string, required)
+        + cost: 0.44 (number)
++ Response 201 (application/json)
+    + Attributes (List Item)
+
+
+## /listItems/{id}
++ Parameters
+    + id: `b00983cd-ecdb-4675-a4f8-6b3c6a192f86` (string) - List Item id
+
+### GET
+Get one list item by id
+
++ Response 200
+    + Attributes (List Item)
+
+### PUT
+Update a rubric item by id
++ Response 202
+    + Attributes (List Item)
+
+### DELETE
+Delete a rubric item
++ Response 202
+
+# Group User Collection
+
+## /users
+### GET
+Get all users
++ Response 200 (application/json)
+    + Attributes (array[User])
+
+### POST
+Create a new user
++ Request (application/json)
+    + Attributes (object)
+        + firstname: April (string, required)
+        + lastname: Van (string, required)
+        + password: pass2345 (string, required)
++ Response 201 (application/json)
+    + Attributes (User)
+
+## /student/{id}
++ Parameters
+    + id: `b00983cd-ecdb-4675-a4f8-6b3c6a192f86` (string) - User id
+
+### GET
+Get one user by id
++ Response 200
+    + Attributes (User)
+
+### PUT
+Update a user by id
++ Response 202
+    + Attributes (User)
+
+### DELETE
+Delete a user
++ Response 202
