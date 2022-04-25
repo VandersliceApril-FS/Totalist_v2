@@ -12,7 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "debug": "^4.3.4",
     "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "morgan-debug": "^2.0.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0",
     "uuidv4": "^6.2.12"
