@@ -12,7 +12,7 @@
     "build-reactjs": "npm run build --prefix reactjs",
     "heroku-postbuild": "concurrently \"npm:install-*\"; concurrently \"npm:build-*\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm start --prefix api",
+    "start": "concurrently \"npm start --prefix api\" \"cd reactjs && npm start\"",
     "dev": "env-cmd -f .env concurrently --kill-others-on-fail \"cd reactjs && npm start\" \" npm run api\"",
     "api": "cd api; node server.js"
   },
