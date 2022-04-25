@@ -36,7 +36,7 @@ try {
 
   // REACT STATIC FILES ---------------------------------
   // Have Node serve the files for our built React app
-  app.use(express.static(path.join(__dirname, '../../reactjs/build')));
+  app.use(express.static(path.resolve(__dirname, '../../reactjs/build')));
   app.get('/*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../../reactjs/build', 'index.html'));
   });
