@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm start --prefix api",
-    "build": "env-cmd -f .env concurrently \"cd reactjs && npm install && npm run build\" \"npm run api\"",
+    "build": "concurrently \"cd reactjs && npm install && npm run build\" \"npm run api\" env-cmd -f .env",
     "dev": "env-cmd -f .env concurrently --kill-others-on-fail \"cd reactjs && npm start\" \" npm run api\"",
     "api": "cd api; node server.js"
   },
